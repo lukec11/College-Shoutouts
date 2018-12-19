@@ -17,9 +17,9 @@ const Layout = ({ children }) => (
           }
         }
       }
-    `}
-    render={data => (
-      <>
+      `}
+      render={data => (
+        <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -28,12 +28,15 @@ const Layout = ({ children }) => (
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 10,
           }}
-        >
+          >
           {children}
+          <div style={{ position: "fixed", bottom: 0 }}>
+            <p>&copy; 2018 Dalton Craven &#47;&#47; <a href="https://github.com/cravend/college-shoutouts">View source on GitHub</a></p>
+          </div>
         </div>
-      </>
+        </>
     )}
-  />
+    />
 )
 
 Layout.propTypes = {
