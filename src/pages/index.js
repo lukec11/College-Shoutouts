@@ -14,7 +14,7 @@ const IndexPage = () => (
     <Link to="/submit/">Submit Encouragement!</Link><br />
     <Link to="/view/">View Encouragement!</Link><br /><br />
     <h3>Hack Club Challenge</h3>
-    <p>Hi challenge participants. Originally, I was going to shout out my friend individually. However, I wanted to open it up for everyone to submit. My submission for the challenge is linked here.</p>
+    <p>Hi hackers! Originally, I was going to individually shout out my friend. However, I wanted to open it up for everyone to submit encouragement. My personal submissions for the challenge are linked <Link to="/individual?id=-LU1XzLVBZP3ounIpVCE">here</Link> and <Link to="/individual?id=-LU3KzYVv7BbLBbavbDi">here</Link>.</p>
   </Layout>
 )
 
