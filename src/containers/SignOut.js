@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { navigate } from 'gatsby'
 import { withFirebase } from '../components/FirebaseContext'
 import { Navbar, Button } from '@blueprintjs/core'
 
 class Signout extends Component {
   signOut = () => {
     this.props.firebase.auth().signOut()
+    navigate('/')
   }
   render() {
     if (this.props.firebase.auth().currentUser) {

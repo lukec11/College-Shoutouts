@@ -10,6 +10,7 @@ const IndexPage = () => (
   <Layout>
     <h1>All Encouragement</h1>
     <p>Feel free to browse through these! If you want to submit something, go <Link to="/submit">here</Link>.</p>
+    <hr />
     <AllProjects />
   </Layout>
 )

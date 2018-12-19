@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { navigate } from 'gatsby'
 import { withFirebase } from '../components/FirebaseContext'
 import EntryItem from '../components/EntryItem'
-import { Button, FormGroup, InputGroup, TextArea } from '@blueprintjs/core'
+import { Button, AnchorButton, FormGroup, InputGroup, TextArea } from '@blueprintjs/core'
 
 class SubmitForm extends Component {
   constructor() {
@@ -39,7 +39,7 @@ class SubmitForm extends Component {
     const d = new Date()
     var datestring = (d.getMonth() + 1).toString() +
     "/" + (d.getDate() + 1).toString() +
-    "/" + (d.getFullYear() + 1).toString()
+    "/" + (d.getFullYear()).toString()
 
     const item = {
       name: this.state.name,
@@ -78,7 +78,8 @@ class SubmitForm extends Component {
             value={this.state.details}
             />
         </FormGroup>
-        <Button type="submit" intent="primary" icon="floppy-disk" text="Submit" style={{ marginBottom: 10 }}/>
+        <Button type="submit" icon="floppy-disk" text="Submit" style={{ marginRight: 10 }}/>
+        <Button type="button" icon="cross" text="Cancel" onClick={ () => navigate('/view')} />
       </form>
     )
   }

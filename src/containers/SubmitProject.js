@@ -8,8 +8,9 @@ import SignOut from '../containers/SignOut'
 
 const SubmitProject = () => (
   <Layout>
-    <h1>All Encouragement</h1>
-    <p>Feel free to browse through these! If you want to submit something, go <Link to="/submit">here</Link>.</p>
+    <h1>Submit Project</h1>
+    <p>Note: all entries are attached to your name/email &mdash; please be nice!</p>
+    <hr />
     <SubmitForm />
   </Layout>
 )
