@@ -1,10 +1,10 @@
 const config = {
-  apiKey: 'AIzaSyDjS6tGpqjAaC0aXQAGZMkjssABbZzTgSo',
-  authDomain: 'awesome-bb71b.firebaseapp.com',
-  databaseURL: 'https://awesome-bb71b.firebaseio.com',
-  projectId: 'awesome-bb71b',
-  storageBucket: 'awesome-bb71b.appspot.com',
-  messagingSenderId: '646496200074',
+  apiKey: "AIzaSyDYPQE6YHa0Fd-glsACXnr43P-m1XHiuko",
+  authDomain: "college-shoutouts.firebaseapp.com",
+  databaseURL: "https://college-shoutouts.firebaseio.com",
+  projectId: "college-shoutouts",
+  storageBucket: "",
+  messagingSenderId: "62180872688"
 }
 
 let firebaseCache
@@ -12,8 +12,7 @@ let firebaseCache
 export const getUiConfig = firebase => ({
   signInFlow: 'popup',
   signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID
   ],
 })
 

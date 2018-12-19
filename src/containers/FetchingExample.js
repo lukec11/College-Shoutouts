@@ -3,13 +3,13 @@ import { withFirebase } from '../components/FirebaseContext'
 
 class FetchingExample extends Component {
   state = {
-    test: null,
+    test: [],
   }
   componentDidMount() {
     const { firebase } = this.props
     firebase
       .database()
-      .ref('/test')
+      .ref()
       .once('value')
       .then(snapshot => {
         this.setState({
@@ -24,9 +24,11 @@ class FetchingExample extends Component {
       return null
     }
 
+    // console.log(test)
+
     return (
       <div>
-        <h4>string test data : {test}</h4>
+        <h4>string test data :</h4>
       </div>
     )
   }

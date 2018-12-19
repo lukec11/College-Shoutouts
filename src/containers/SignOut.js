@@ -1,27 +1,25 @@
 import React, { Component } from 'react'
 import { withFirebase } from '../components/FirebaseContext'
+import { Navbar, Button } from '@blueprintjs/core'
 
 class Signout extends Component {
   signOut = () => {
     this.props.firebase.auth().signOut()
   }
   render() {
-    return (
-      <button
-        style={{
-          marginLeft: 10,
-          borderRadius: '0.5rem',
-          backgroundColor: '#fff',
-          border: '2px solid #ffa400',
-          fontFamily: 'sans-serif',
-          padding: '0.5rem 0.5rem',
-          color: '#0f0f0f',
-        }}
-        onClick={this.signOut}
-      >
-        Sign Out
-      </button>
-    )
+    if (this.props.firebase.auth().currentUser) {
+      return (
+        <>
+          <Navbar.Divider />
+          <Button
+            className="bp3-minimal"
+            icon="log-out"
+            text="Sign Out"
+            onClick={this.signOut}
+          />
+        </>
+      )
+    } else return null
   }
 }
 

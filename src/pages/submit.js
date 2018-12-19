@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import getFirebase from '../firebase'
 import FirebaseContext from '../components/FirebaseContext'
 import SignIn from '../containers/SignIn'
+import SubmitProject from '../containers/SubmitProject'
 
-class Layout extends Component {
+class Submit extends Component {
   state = {
     firebase: null,
     authenticated: false,
@@ -36,10 +37,10 @@ class Layout extends Component {
 
     return (
       <FirebaseContext.Provider value={firebase}>
-        {this.props.children}
+        {authenticated ? <SubmitProject /> : <SignIn />}
       </FirebaseContext.Provider>
     )
   }
 }
 
-export default Layout
+export default Submit
